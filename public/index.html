@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="keywords" content="모듈, 동작, 테스트, 테스트베드" />
+  <meta name="description" content="제작한 모듈의 동작을 확인하고 사용자에게는 샘플 코드를 제공하는 용도의 페이지입니다" />
+  <title>KURLY UTIL KIT - TESTBED</title>
+</head>
+
+<body>
+  <div id="root">
+    <div class="group">
+      <p>IntToSepStr 모듈의 addSeparator 메서드를 사용할 수 있습니다. (* 자릿수는 생략 가능합니다)</p>
+      <dl>
+        <dt>IntToSepStr.addSeparator(202020, 3)</dt>
+        <dd class="first"></dd>
+      </dl>
+    </div>
+    <div class="group">
+      <p>디스트럭팅을 통해 addSeparator를 바로 사용할 수 있습니다.</p>
+      <dl>
+        <dt>addComma(2110101020)</dt>
+        <dd class="second"></dd>
+      </dl>
+    </div>
+    <div class="group">
+      <p>또는 필요에 의한 래퍼 / 부분적용 / 커링 함수를 만들어 사용할 수 있습니다.</p>
+      <dl>
+        <dt>addSpace(2110101020)</dt>
+        <dd class="third"></dd>
+      </dl>
+    </div>
+  </div>
+  <script>
+    console.log(IntToSepStr.addSeparator(202020, 3));
+    const { addSeparator: addComma } = IntToSepStr;
+    console.log(addComma(2110101020));
+    const addSpace = (num) => {
+      const unit = 2;
+      const space = ' ';
+      return IntToSepStr.addSeparator(num, unit, space);
+    };
+    console.log(addSpace(2110101020));
+  </script>
+</body>
+
+</html>
