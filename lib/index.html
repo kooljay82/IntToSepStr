@@ -38,15 +38,21 @@
     </div>
   </div>
   <script>
-    console.log(IntToSepStr.addSeparator(202020, 3));
+    const first = document.querySelector('.first');
+    first.innerHTML = IntToSepStr.addSeparator(202020, 3);
+
+    const second = document.querySelector('.second');
     const { addSeparator: addComma } = IntToSepStr;
-    console.log(addComma(2110101020));
+    second.innerHTML = addComma(2110101020);
+
+    const third = document.querySelector('.third');
     const addSpace = (num) => {
       const unit = 2;
       const space = ' ';
       return IntToSepStr.addSeparator(num, unit, space);
     };
-    console.log(addSpace(2110101020));
+    third.innerHTML = addSpace(2110101020);
+
   </script>
 </body>
 

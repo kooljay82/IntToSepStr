@@ -1,7 +1,6 @@
 // kurly util kit / IntToSepStr
 
 export const RULES = {
-  TYPE: 'number',
   MIN_LENGTH: 1,
   MAX_LENGTH: 15,
 };
@@ -33,7 +32,7 @@ export const addSeparator = (num, unit = 3, sep = ',') => {
   if (unit >= validArr.length) {
     return validArr.join('');
   } else {
-    let AddedSepStr = ``;
+    let AddedSepStr = '';
     validArr.reverse().forEach((v, i) => {
       if (i > 0 && i % unit === 0) {
         AddedSepStr = `${v}${sep}${AddedSepStr}`;
