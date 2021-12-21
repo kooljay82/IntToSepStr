@@ -18,7 +18,7 @@ export const checkIsValidLength = (num) => {
   const strOfNum = toStringOfNumber(num);
   const lengthIsGood = ((len) => {
     return len >= RULES.MIN_LENGTH && len <= RULES.MAX_LENGTH;
-  })(strOfNum.length || 0);
+  })(strOfNum.length);
   return lengthIsGood ? strOfNum : '';
 };
 
