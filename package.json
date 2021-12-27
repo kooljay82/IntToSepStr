@@ -2,7 +2,7 @@
   "name": "int-to-sep-str",
   "version": "1.0.0",
   "description": "정수 혹은 정수 형태의 문자열에 구분자를 추가해주는 기능을 제공",
-  "main": "index.js",
+  "main": "/lib/int-to-sep-str.js",
   "scripts": {
     "start": "webpack serve --open",
     "build": "rimraf lib && webpack --progress",

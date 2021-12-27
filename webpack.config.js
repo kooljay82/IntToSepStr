@@ -7,7 +7,7 @@ module.exports = {
   entry: ['/src/index.js'],
   output: {
     path: path.resolve(__dirname, './lib'),
-    filename: 'IntToSepStr.js',
+    filename: 'int-to-sep-str.js',
     library: {
       name: 'IntToSepStr',
       type: 'umd',
